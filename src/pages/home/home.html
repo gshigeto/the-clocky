@@ -8,11 +8,18 @@
 </ion-header>
 
 <ion-content padding>
-  <h3>Ionic Menu Starter</h3>
-
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
-
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+  <div text-center>
+    <h1>
+      <span *ngIf="shift.clockedIn">Clocked IN</span>
+      <span *ngIf="!shift.clockedIn">Clocked OUT</span>
+    </h1>
+  </div>
+  <div [ngClass]="{'tada': shift.clockedIn, 'rubberBand': !shift.clockedIn}" text-center margin-top class="animated button-wrap">
+    <button (tap)="toggle()" ion-button block full [color]="shift.clockedIn ? 'danger' : 'secondary'">
+      <h1>
+        <span *ngIf="!shift.clockedIn">Clock In</span>
+        <span *ngIf="shift.clockedIn">Clock Out</span>
+      </h1>
+    </button>
+  </div>
 </ion-content>

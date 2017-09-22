@@ -7,8 +7,15 @@ import { NavController } from 'ionic-angular';
 })
 export class HomePage {
 
+  shift: any;
   constructor(public navCtrl: NavController) {
+    this.shift = {
+      clockedIn: true
+    }
+  }
 
+  toggle() {
+    this.shift.clockedIn = !this.shift.clockedIn;
   }
 
 }
