@@ -1,8 +1,8 @@
 {
   "name": "the-clocky",
   "version": "0.0.1",
-  "author": "Ionic Framework",
-  "homepage": "http://ionicframework.com/",
+  "author": "Gavin Nitta",
+  "homepage": "http://theclocky.com/",
   "private": true,
   "scripts": {
     "clean": "ionic-app-scripts clean",
@@ -34,5 +34,10 @@
     "@ionic/app-scripts": "2.1.4",
     "typescript": "2.3.4"
   },
-  "description": "An Ionic project"
+  "config": {
+    "ionic_copy": "./config/copy.config.js",
+    "ionic_optimization": "./config/optimization.config.js",
+    "ionic_webpack": "./config/webpack.config.js"
+  },
+  "description": "A simple timekeeping app!"
 }
